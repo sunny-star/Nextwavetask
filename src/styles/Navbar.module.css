@@ -1,0 +1,68 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Desktop menu */
+.menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Icons on right */
+.icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hamburger menu button for mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 24px;
+    height: 18px;
+}
+
+.hamburger div {
+    height: 3px;
+    background: #111;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        /* Hide desktop menu */
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger */
+    }
+}

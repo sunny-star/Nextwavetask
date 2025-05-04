@@ -1,0 +1,139 @@
+.card {
+    background: #fff;
+    border: 1.5px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.2s;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    transition: max-height 0.2s;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #111;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.outOfStock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #111;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 2px;
+    border: 1.5px solid #111;
+}
+
+.info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    position: relative;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.price {
+    color: #888;
+    font-size: 0.92rem;
+}
+
+.wishlist {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ec4e99;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .imageWrapper {
+        height: 170px;
+    }
+
+    .image {
+        max-height: 130px;
+    }
+
+    .info {
+        padding: 0.8rem;
+    }
+
+    .title {
+        font-size: 0.97rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        border-radius: 5px;
+    }
+
+    .imageWrapper {
+        height: 120px;
+    }
+
+    .image {
+        max-height: 90px;
+    }
+
+    .info {
+        padding: 0.7rem 0.5rem;
+    }
+
+    .title {
+        font-size: 0.95rem;
+    }
+
+    .price {
+        font-size: 0.88rem;
+    }
+
+    .wishlist {
+        right: 0.6rem;
+        top: 0.6rem;
+        font-size: 1rem;
+    }
+}
